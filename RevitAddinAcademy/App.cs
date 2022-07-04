@@ -21,6 +21,7 @@ namespace RevitAddinAcademy
         public Result OnShutdown(UIControlledApplication a)
         {
             TaskDialog.Show("Hello Team", "Leaving Revit Add-in Academy");
+           
             return Result.Succeeded;
         }
     }
