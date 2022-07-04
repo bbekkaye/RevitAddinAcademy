@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("RevitAddinAcademy")]
 [assembly: AssemblyDescription("Revit Add-In Description for RevitAddinAcademy")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Autodesk Inc.")]
+[assembly: AssemblyCompany("ArchSmarter_Student")]
 [assembly: AssemblyProduct("Revit Add-in Academy Test File")]
 [assembly: AssemblyCopyright("Copyright (C) 2020 by Bachir Bekkaye")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("321044f7-b0b2-4b1c-af18-e71a19252be0")]
+[assembly: Guid("B84DDA29-D750-4BBA-A32B-E3640EFFFEF8")]
 
 // Version information for an assembly consists of the following four values:
 //
