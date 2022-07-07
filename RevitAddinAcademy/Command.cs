@@ -7,6 +7,8 @@ using Autodesk.Revit.UI.Selection;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Excel = Microsoft.Office.Interop.Excel;
+
 
 #endregion
 
@@ -25,10 +27,9 @@ namespace RevitAddinAcademy
             Application app = uiapp.Application;
             Document doc = uidoc.Document;
 
-            TaskDialog.Show("Hello", "This is my first command add-in");
-            TaskDialog.Show("Hello again", "This is another window add-in");
 
-
+            TaskDialog.Show("Hello", "This is mu first command add-in. I just modified it.");
+            TaskDialog.Show("Hello again", "This is another window");
 
             return Result.Succeeded;
         }
