@@ -15,7 +15,7 @@ using Excel = Microsoft.Office.Interop.Excel;
 namespace RevitAddinAcademy
 {
     [Transaction(TransactionMode.Manual)]
-    public class Command : IExternalCommand
+    public class cmdSession02Skills: IExternalCommand
     {
         public Result Execute(
           ExternalCommandData commandData,
@@ -28,8 +28,8 @@ namespace RevitAddinAcademy
             Document doc = uidoc.Document;
 
 
-            TaskDialog.Show("Hello", "This is my first command add-in. I just modified it.");
-            TaskDialog.Show("Hello again", "This is another window");
+            TaskDialog.Show("Hello", "This is session 02 skills.");
+            TaskDialog.Show("Hello again", "Thanks for passing by on session 02");
 
             return Result.Succeeded;
         }
