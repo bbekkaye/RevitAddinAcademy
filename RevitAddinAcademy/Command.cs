@@ -76,8 +76,12 @@ namespace RevitAddinAcademy
                 else if(curElem.ViewFamily == ViewFamily.CeilingPlan)
                 {
                     curRCPVFT = curElem;
-                }
+                }             
             }
+            FilteredElementCollector collector2 = new FilteredElementCollector(doc);
+            collector2.OfCategory(BuiltInCategory.OST_TitleBlocks);
+            collector2.WhereElementIsElementType();
+
             using (Transaction t = new Transaction(doc))
             {
                 t.Start("Create Revit Stuff");
@@ -85,6 +89,10 @@ namespace RevitAddinAcademy
                 ViewPlan curPlan = ViewPlan.Create(doc, curVFT.Id, newLevel.Id);
                 ViewPlan curRCP = ViewPlan.Create(doc, curRCPVFT.Id, newLevel.Id);
                 curRCP.Name = curRCP.Name + " RCP";
+
+                ViewSheet newSheet = ViewSheet.Create(doc, collector2.FirstElementId());
+                Viewport newVP = Viewport.Create(doc, newSheet.Id, curPlan.Id, new XYZ(0, 0, 0));
+
 
                 t.Commit();
             }
